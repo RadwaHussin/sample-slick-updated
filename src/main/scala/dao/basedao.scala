@@ -11,12 +11,6 @@ import scala.concurrent.Future
 
 class basedao  {
 
-//  val db = Database.forURL(
-//    "jdbc:mysql://127.0.0.1:3306/Person"+
-//      "?user=root&password=password",
-//    //driver = "com.mysql.cj.jdbc.Driver"   // msh la2y driver da "com.typesafe.slick" %% "slick-hikaricp"
-//    driver = "com.mysql.jdbc.Driver"
-//  )
 
   val db = Database.forConfig("mysqlDB")
 

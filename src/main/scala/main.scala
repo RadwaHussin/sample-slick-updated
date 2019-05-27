@@ -10,20 +10,12 @@ import scala.util.{Failure, Success}
 import akka.stream.ActorMaterializer
 import akka.http.scaladsl.Http
 
-//import slick.driver.MySQLDriver.api._
-
 object main extends App with UserRoute {
 
   implicit val system: ActorSystem = ActorSystem("helloAkkaHttpServer")
   implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val executionContext: ExecutionContext = system.dispatcher
 
-//  val db = Database.forURL(
-//    "jdbc:mysql://127.0.0.1:3306/person"+
-//      "?user=root&password=password",
-//    //driver = "com.mysql.cj.jdbc.Driver"   // msh la2y driver da "com.typesafe.slick" %% "slick-hikaricp"
-//    driver = "com.mysql.jdbc.Driver"
-//  )
    val db = Database.forConfig("mysqlDB")  //def db = Database.forConfig("database")
   //-----------------------------------------------
 
